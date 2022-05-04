@@ -1,6 +1,8 @@
 import {Game} from "./modules/game.js";
 
 const game=new Game();
+game.createTetromino();
+
 const SIZE_BLOCK=30;
 const COLUMNS=10;
 const ROWS=20;
@@ -19,7 +21,7 @@ const showArea=area=>{
     const line=area[y];
     for (let x=0;x<line.length;x++){
       const block=line[x];
-      if (block!='o'){
+      if (block!=='o'){
         context.fillStyle='tomato';
         context.strokeStyle='white';
         context.fillRect(x*SIZE_BLOCK,y*SIZE_BLOCK,SIZE_BLOCK,SIZE_BLOCK);
