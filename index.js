@@ -2,10 +2,10 @@ import {Game} from "./modules/game.js";
 
 const game=new Game();
 game.createTetromino();
-
+export  const COLUMNS=10;
+export  const ROWS=20;
 const SIZE_BLOCK=30;
-const COLUMNS=10;
-const ROWS=20;
+
 const container=document.querySelector('.container');
 const canvas=document.createElement('canvas');
 canvas.classList.add('game-area');
