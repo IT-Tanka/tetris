@@ -19,9 +19,9 @@ export class Game {
   ['o','o','o','o','o','o','o','o','o','o',],
   ['o','o','o','o','o','o','o','o','o','o',],
   ['o','o','o','o','o','o','o','o','o','o',],
-  ['o','s','o','o','o','o','o','o','o','o',],
-  ['o','s','o','o','o','o','o','x','x','o',],
-  ['s','s','o','o','o','o','o','x','x','o',]
+  ['o','o','o','o','o','o','o','o','o','o',],
+  ['o','o','o','o','o','o','o','o','o','o',],
+  ['o','o','o','o','o','o','o','o','o','o',]
   ];
   activeTetromino=this.createTetromino();
   nextTetromino=this.createTetromino();

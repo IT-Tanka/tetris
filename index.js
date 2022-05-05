@@ -14,6 +14,15 @@ canvas.width=SIZE_BLOCK*COLUMNS;
 canvas.height=SIZE_BLOCK*ROWS;
 const context=canvas.getContext('2d');
 
+const colors={
+  J:'red',
+  I:'blue',
+  O:'green',
+  L:'yellow',
+  2:'black',
+  T:'pink',
+  S:'magenta'
+};
 
 const showArea=area=>{
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -22,7 +31,7 @@ const showArea=area=>{
     for (let x=0;x<line.length;x++){
       const block=line[x];
       if (block!=='o'){
-        context.fillStyle='tomato';
+        context.fillStyle=colors[block];
         context.strokeStyle='white';
         context.fillRect(x*SIZE_BLOCK,y*SIZE_BLOCK,SIZE_BLOCK,SIZE_BLOCK);
         context.strokeRect(x*SIZE_BLOCK,y*SIZE_BLOCK,SIZE_BLOCK,SIZE_BLOCK);
