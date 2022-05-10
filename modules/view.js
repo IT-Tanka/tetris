@@ -18,10 +18,14 @@ export class View{
   context=this.canvas.getContext('2d');
   
   preview(){
-    const h1=document.createElement('h1');
-    h1.textContent='PUSH ENTER TO START';
-    this.container.append(h1);
+    const startText=document.createElement('h2');
+    startText.style.color='red';
+    startText.style.textAlign='center';
+    startText.textContent='PUSH ENTER TO START';
+    this.container.append(startText);
+    
   }
+
   init(){
     this.canvas.classList.add('game-area');
     this.container.append(this.canvas);

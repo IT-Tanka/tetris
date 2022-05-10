@@ -8,6 +8,7 @@ export class Controller{
       if (event.code===keyCode){
         this.view.init();
         this.start();
+        document.querySelector('h2').remove();
       }
     })
   }
