@@ -29,9 +29,7 @@ export class Game {
 
   createTetromino(){
     const keys=Object.keys(tetrominoes);
-    console.log('keys: ', keys);
     const letterTetromino=keys[Math.floor(Math.random()*keys.length)];
-    console.log('letterTetromino: ', letterTetromino);
     const rotation=tetrominoes[letterTetromino];
     const rotationIndex=Math.floor(Math.random()*rotation.length);
     const block=rotation[rotationIndex];
@@ -73,7 +71,7 @@ export class Game {
   }
 
   get viewArea(){
-    console.log('vewArea worked');
+  
     const area=JSON.parse(JSON.stringify(this.area));
     const {x,y, block:tetromino}=this.activeTetromino;
     for (let i=0;i<tetromino.length;i++){

@@ -3,6 +3,7 @@ import {ROWS, COLUMNS, SIZE_BLOCK} from '../index.js';
 export class View{
   constructor (container){
     this.container=container;
+    this.preview();
   }
   colors={
     J:'red',
@@ -16,6 +17,11 @@ export class View{
   canvas=document.createElement('canvas');
   context=this.canvas.getContext('2d');
   
+  preview(){
+    const h1=document.createElement('h1');
+    h1.textContent='PUSH ENTER TO START';
+    this.container.append(h1);
+  }
   init(){
     this.canvas.classList.add('game-area');
     this.container.append(this.canvas);

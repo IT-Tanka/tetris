@@ -16,7 +16,7 @@ export class Controller{
     setInterval(()=>{
       this.game.moveDown();
       this.view.showArea(this.game.viewArea);
-    },1000);
+    },500);
     window.addEventListener('keydown', event => {
       const key=event.code;
   switch (key) {
