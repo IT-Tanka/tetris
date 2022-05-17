@@ -11,9 +11,15 @@ h1 span{
 .container{
   width: 500px;
   margin: 0 auto;
+  display: grid;
+  gap: 50px;
+  align-items: flex-start;
+  grid-template-areas: 
+  'score game'
+  'next game';
 }
 .game-area{
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: block;
   border: solid black;
   border-width: 0 2px 3px 2px;

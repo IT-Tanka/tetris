@@ -8,16 +8,24 @@ export class Controller{
       if (event.code===keyCode){
         this.view.init();
         this.start();
-        document.querySelector('h2').remove();
       }
     })
   }
   start(){
     this.view.showArea(this.game.viewArea);
-    setInterval(()=>{
-      this.game.moveDown();
-      this.view.showArea(this.game.viewArea);
-    },500);
+    this.view.createBlockScore();
+    this.view.createBlockNextTetromino();
+    
+    const tick=()=>{
+      if (this.game.gameOver) return;
+      setTimeout(()=>{
+        this.game.moveDown();
+        this.view.showArea(this.game.viewArea);
+        tick();
+      },500);
+    };
+    tick();
+
     window.addEventListener('keydown', event => {
       const key=event.code;
   switch (key) {
