@@ -91,6 +91,7 @@ export class View{
 
     }
   }
+  
   init(){
     this.container.textContent='';
     this.canvas.style.gridArea='game';

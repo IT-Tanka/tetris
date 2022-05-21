@@ -16,12 +16,13 @@ export class Controller{
     this.game.creatUpdatePanels( this.view.createBlockScore(), this.view.createBlockNextTetramino());
     
     const tick=()=>{
+      const time=(1100-100*this.game.lvl);
       if (this.game.gameOver) return;
       setTimeout(()=>{
         this.game.moveDown();
         this.view.showArea(this.game.viewArea);
         tick();
-      },500);
+      },time>100?time:100);
     };
   
     tick();
