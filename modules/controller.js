@@ -13,8 +13,7 @@ export class Controller{
   }
   start(){
     this.view.showArea(this.game.viewArea);
-    this.view.createBlockScore();
-    this.view.createBlockNextTetromino();
+    this.game.creatUpdatePanels( this.view.createBlockScore(), this.view.createBlockNextTetramino());
     
     const tick=()=>{
       if (this.game.gameOver) return;
@@ -24,6 +23,7 @@ export class Controller{
         tick();
       },500);
     };
+  
     tick();
 
     window.addEventListener('keydown', event => {
@@ -34,7 +34,7 @@ export class Controller{
     this.view.showArea(this.game.viewArea);
     break;
   case 'ArrowUp':
-    this.game.rotateTetromino();
+    this.game.rotateTetramino();
     this.view.showArea(this.game.viewArea);
     break;
   case 'ArrowLeft':
